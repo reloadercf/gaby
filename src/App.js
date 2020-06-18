@@ -1,7 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 import {useFirebaseApp} from 'reactfire';
+import Login from './Components/Login'
 
 function App() {
   const firebase= useFirebaseApp();
@@ -9,7 +8,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Hola Gaby hermosa!!!!!</h1>
+      <p>Usuario</p>
+      <Login />
     </div>
   );
 }
