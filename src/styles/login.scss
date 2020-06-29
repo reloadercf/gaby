@@ -1,0 +1,93 @@
+// @font-face {
+//     font-family: font-text;
+//     src: url(../fonts/Montserrat/Montserrat-Regular.ttf);
+//   }
+
+$pColor: rgb(255,169,2);
+$sColor: #161616;
+
+$radius: 15px;
+
+body{
+    display: flex;
+    // margin-top: 10%;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+}
+
+/*
+div{
+    border: 1px solid red;
+}*/
+
+.login-container{
+    background-image: url(../image/background.png);
+    margin-top: 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-circle{
+    border-radius: 50%;
+    background-color: $pColor;
+    /*opacity: 0.8;*/
+    width: 300px;
+    img{
+        width: 300px;
+    }
+}
+
+.login-input{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;    
+    input{
+        box-sizing: border-box;
+        margin: 7px;
+        padding: 10px;
+        width: 350px;
+        height: 50px;
+        border-radius: $radius;
+        font-size: x-large;
+        border-style: none;
+        font-family: font-text; 
+    }
+    button {
+        color: $pColor;
+        background-color: $sColor;
+    }
+
+    // .loginBtn{
+    //     color: $pColor;
+    //     background-color: $sColor;
+    // }
+}
+
+.cardMenu{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 150px;
+    border-radius: $radius;
+    border-style: solid;
+    border-color: #ffa902;
+    margin: 15px;
+    
+}
+
+.imgCard{
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    padding: 5px;
+}
+
+.textCard{
+    text-align: center;
+    margin: 10px;
+}
+

@@ -1,0 +1,98 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/*
+div{
+    border: 1px solid red;
+}*/
+.login-container {
+  background-image: url(../image/background.png);
+  margin-top: 10%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo-circle {
+  border-radius: 50%;
+  background-color: #ffa902;
+  /*opacity: 0.8;*/
+  width: 300px;
+}
+
+.logo-circle img {
+  width: 300px;
+}
+
+.login-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 40px;
+}
+
+.login-input input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 7px;
+  padding: 10px;
+  width: 350px;
+  height: 50px;
+  border-radius: 15px;
+  font-size: x-large;
+  border-style: none;
+  font-family: font-text;
+}
+
+.login-input button {
+  color: #ffa902;
+  background-color: #161616;
+}
+
+.cardMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 150px;
+  height: 150px;
+  border-radius: 15px;
+  border-style: solid;
+  border-color: #ffa902;
+  margin: 15px;
+}
+
+.imgCard {
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  padding: 5px;
+}
+
+.textCard {
+  text-align: center;
+  margin: 10px;
+}
+/*# sourceMappingURL=login.css.map */

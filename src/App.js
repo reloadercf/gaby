@@ -1,15 +1,14 @@
 import React from 'react';
-import {useFirebaseApp} from 'reactfire';
-import Login from './Components/Login'
+// import {useFirebaseApp} from 'reactfire';
+import Routes from './Routes';
 
 function App() {
-  const firebase= useFirebaseApp();
-  console.log(useFirebaseApp);
+  // const firebase= useFirebaseApp();
+  // console.log(useFirebaseApp);
 
   return (
     <div className="App">
-      <p>Usuario</p>
-      <Login />
+      <Routes />
     </div>
   );
 }

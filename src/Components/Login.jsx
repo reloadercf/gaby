@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import 'firebase/auth';
 import { useFirebaseApp, useUser } from 'reactfire';
+import NavBar from './NavBar';
+import logoImage from '../image/logoBurgerixtli.png';
 
 
 const Login = () => {
@@ -18,15 +20,15 @@ const Login = () => {
         await firebase.auth().signInWithEmailAndPassword(email, password);
     }
 
-    const logout = async () => {
-        await firebase.auth().signOut();
-    }
-
     return ( 
-        <div>
+        <div className="login-container">
             {
             !user &&
-            <div>
+            <div className='login-input'>
+                <div className="logo-circle">
+                    <img src={logoImage} className="App-logo" alt="logo" />
+                </div> 
+                
                 <input type="email" id="email" placeholder="Email" onChange={(ev) => setEmail(ev.target.value) } />
                 <input type="password" id="password" placeholder="Password" onChange={ (ev) => setPassword(ev.target.value) }/>
                 <button onClick={submit}>Create account</button>
@@ -34,7 +36,10 @@ const Login = () => {
             </div>
             }
             {
-            user && <button onClick= {logout}>Logout</button>
+                user && 
+                    <div> 
+                        <NavBar /> 
+                    </div>
             }
         </div>
      );

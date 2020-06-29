@@ -1,19 +1,19 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './styles/login.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+import * as serviceWorker from './serviceWorker'; ////Para que sirve, lo puedo eliminar?
 import firebaseConfig  from './firebaseConfig';
+import { FirebaseAppProvider } from 'reactfire';
+import { BrowserRouter } from 'react-router-dom';
 
-import {
-  FirebaseAppProvider
-} from 'reactfire'
+const WhitRouter = () => <BrowserRouter><App /></BrowserRouter>
 
 ReactDOM.render(
   (
   <FirebaseAppProvider firebaseConfig={ firebaseConfig }>
   <Suspense fallback={<p>Cargando...</p>}>
-  <App />
+  <WhitRouter />
   </Suspense>
   </FirebaseAppProvider>
   ), document.getElementById('root')
