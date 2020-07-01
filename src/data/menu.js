@@ -6,7 +6,6 @@ const menu = {
         "name": "Sandwich de jamón y queso",
         "price": 35,
         "img": "https://i.ibb.co/ynC9xHZ/sandjc.png",
-        "icdel": "https://i.ibb.co/gdkqQpj/delete.png",
         "quantity": 1,
         "total": 35
         
@@ -16,7 +15,6 @@ const menu = {
         "name": "Jugo Natural",
         "price": 15,
         "img": "https://i.ibb.co/8mrd4MK/orangejuice.png",
-        "icdel": "https://i.ibb.co/gdkqQpj/delete.png",
         "quantity": 1,
         "total": 15
         
@@ -26,7 +24,6 @@ const menu = {
         "name": "Café Americano",
         "price": 20,
         "img": "https://i.ibb.co/nsj1GL0/americancoffe.png",
-        "icdel": "https://i.ibb.co/gdkqQpj/delete.png",
         "quantity": 1,
         "total": 20
         
@@ -36,7 +33,6 @@ const menu = {
         "name": "Café con leche",
         "price": 28,
         "img": "https://i.ibb.co/GRPBm7j/coffeandmilk.png",
-        "icdel": "https://i.ibb.co/gdkqQpj/delete.png",
         "quantity": 1,
         "total": 28
         
@@ -50,7 +46,6 @@ const menu = {
         "name": "Sencilla Res",
         "price": 40,
         "img": "https://i.ibb.co/qkQBGBr/basicburger.png",
-        "icdel": "https://i.ibb.co/gdkqQpj/delete.png",
         "quantity": 1,
         "total": 40
         
@@ -60,7 +55,6 @@ const menu = {
         "name": "Doble Res",
         "price": 55,
         "img": "https://i.ibb.co/M5YL69V/doubleburger.png",
-        "icdel": "https://i.ibb.co/gdkqQpj/delete.png",
         "quantity": 1,
         "total": 55
     },
@@ -69,7 +63,6 @@ const menu = {
         "name": "Sencilla Pollo",
         "price": 40,
         "img": "https://i.ibb.co/qkQBGBr/basicburger.png",
-        "icdel": "https://i.ibb.co/gdkqQpj/delete.png",
         "quantity": 1,
         "total": 40
 
@@ -79,7 +72,6 @@ const menu = {
         "name": "Doble Pollo",
         "price": 55,
         "img": "https://i.ibb.co/M5YL69V/doubleburger.png",
-        "icdel": "https://i.ibb.co/gdkqQpj/delete.png",
         "quantity": 1,
         "total": 55
 
@@ -89,7 +81,6 @@ const menu = {
         "name": "Sencilla Vegetariana",
         "price": 40,
         "img": "https://i.ibb.co/qkQBGBr/basicburger.png",
-        "icdel": "https://i.ibb.co/gdkqQpj/delete.png",
         "quantity": 1,
         "total": 40
 
@@ -99,7 +90,6 @@ const menu = {
         "name": "Doble Vegetariana",
         "price": 55,
         "img": "https://i.ibb.co/M5YL69V/doubleburger.png",
-        "icdel": "https://i.ibb.co/gdkqQpj/delete.png",
         "quantity": 1,
         "total": 55
 
@@ -111,7 +101,6 @@ const menu = {
         "name": "Refresco",
         "price": 15,
         "img": "https://i.ibb.co/CmprZYD/soda.png",
-        "icdel": "https://i.ibb.co/gdkqQpj/delete.png",
         "quantity": 1,
         "total": 15
         
@@ -121,7 +110,6 @@ const menu = {
         "name": "Agua",
         "price": 10,
         "img": "https://i.ibb.co/k0QmDK4/water.png",
-        "icdel": "https://i.ibb.co/gdkqQpj/delete.png",
         "quantity": 1,
         "total": 10
         
@@ -133,7 +121,6 @@ const menu = {
         "name": "Papas a la francesa",
         "price": 15,
         "img": "https://i.ibb.co/h7x8Cys/frenchfries.png",
-        "icdel": "https://i.ibb.co/gdkqQpj/delete.png",
         "quantity": 1,
         "total": 15
         
@@ -143,7 +130,6 @@ const menu = {
         "name": "Aros de Cebolla",
         "price": 15,
         "img": "https://i.ibb.co/9snTnwd/onionrings.png",
-        "icdel": "https://i.ibb.co/gdkqQpj/delete.png",
         "quantity": 1,
         "total": 15
         

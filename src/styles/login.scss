@@ -21,7 +21,7 @@ div{
 }*/
 
 .login-container{
-    background-image: url(../image/background.png);
+    background-image: url(../assets/image/background.png);
     margin-top: 10%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -90,4 +90,31 @@ div{
     text-align: center;
     margin: 10px;
 }
+
+.customerOrder{
+    display: flex;
+    flex-direction: column;
+    border-radius: $radius;
+    border:solid;
+    border-color: #ffa902;
+
+}
+
+.headerOrder{
+    display: flex;
+    flex-direction: column;
+}
+
+.headerOrder input{
+    width: 50%;
+    margin: 10px;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+.containerCard{
+    display: flex;
+    
+}
+
 

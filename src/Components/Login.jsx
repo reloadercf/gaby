@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import 'firebase/auth';
 import { useFirebaseApp, useUser } from 'reactfire';
 import NavBar from './NavBar';
-import logoImage from '../image/logoBurgerixtli.png';
+import logoImage from '../assets/image/logoBurgerixtli.png';
 
 
 const Login = () => {
