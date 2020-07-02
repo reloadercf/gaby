@@ -9,15 +9,25 @@ const Order = ({pedido}) => {
                 <input type="text" placeholder="Nombre cliente"/>
                 <input type="text" placeholder="No mesa"/>
             </div>
-             {pedido.map(item => (
-                 <table key={item.id}> 
-                     <tr>   
-                     <td><p>{item.quantity}</p></td>
-                     <td><h5>{item.name}</h5></td>
-                     <td><p>${item.price}</p></td>
-                     </tr> 
-                 </table>
-            ))} 
+            <table>
+            <caption>Ticket para cocina</caption>
+                <thead>
+                    <tr>   
+                    <th><p>Cant.</p></th>
+                    <th><p>Producto</p></th>
+                    <th><p>Precio</p></th>
+                    </tr> 
+                </thead>  
+                {pedido.map(item => (
+                <tbody key={item.id}>
+                    <tr>   
+                    <td className="unitQuantity"><p>{item.quantity}</p></td>
+                    <td><p>{item.name}</p></td>
+                    <td className="value"><p>${item.price}</p></td>
+                    </tr> 
+                 </tbody>
+                ))}
+            </table>  
         </div> 
 
      );

@@ -114,7 +114,12 @@ div{
 
 .containerCard{
     display: flex;
+    flex-wrap: wrap;
     
+}
+
+.containerOrder{
+    display: flex;
 }
 
 

@@ -23,7 +23,7 @@ const Products = (props) => {
                 />
             ))} 
         </div>
-        <div>
+        <div className="containerOrder">
             <Order pedido = {pedido}/>
         </div>
         </Fragment>
