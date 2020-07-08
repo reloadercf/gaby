@@ -1,13 +1,3 @@
-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-/*
-div{
-    border: 1px solid red;
-}*/
 .login-container {
   background-image: url(../assets/image/background.png);
   margin-top: 10%;
@@ -68,6 +58,42 @@ div{
   background-color: #161616;
 }
 
+.main-nav {
+  padding: 20px;
+  margin: 0 10px;
+}
+
+.containerMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.containerMenu .containerCard {
+  width: 55%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.containerMenu .containerOrder {
+  width: 45%;
+  margin: 15px 15px 15px 0px;
+}
+
 .cardMenu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -126,17 +152,7 @@ div{
   border-radius: 5px;
 }
 
-.containerCard {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.containerOrder {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.iconDelete {
+  width: 20px;
 }
 /*# sourceMappingURL=login.css.map */

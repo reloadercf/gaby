@@ -1,4 +1,4 @@
-import React, {useState, Fragment } from 'react';
+import React, {useState} from 'react';
 import menu from '../data/menu'
 import Card from './Card'
 import Order from './Order'
@@ -10,8 +10,9 @@ const Products = (props) => {
     const [pedido, addProduct] =useState([]);
 
     return ( 
-        <Fragment>
-            <NavBar />
+        <div>
+        <NavBar />
+        <div className="containerMenu">
         <div className="containerCard">
             {productos.map(item => (
                 <Card 
@@ -24,9 +25,14 @@ const Products = (props) => {
             ))} 
         </div>
         <div className="containerOrder">
-            <Order pedido = {pedido}/>
+            <Order pedido = {pedido}
+                   addProduct = {addProduct}
+                   productos = {productos}/>
         </div>
-        </Fragment>
+
+        </div>
+        
+        </div>
     );
 }
  

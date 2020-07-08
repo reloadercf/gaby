@@ -7,7 +7,7 @@ function App() {
   // console.log(useFirebaseApp);
 
   return (
-    <div className="App">
+    <div>
       <Routes />
     </div>
   );

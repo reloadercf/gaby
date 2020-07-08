@@ -12,7 +12,7 @@ const NavBar = () => {
     }
 
     return ( 
-        <nav>
+        <nav className="main-nav">
             <Link exact to="/">
             <span style={{padding: "10px"}}>Login</span>
             </Link>

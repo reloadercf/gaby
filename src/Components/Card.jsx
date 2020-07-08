@@ -9,7 +9,7 @@ const Card = ({addProduct,productos,producto,pedido}) => {
 
         if(contieneProduct.length > 0) {
             for(let index=0; index < pedido.length; index++ ){
-                if (pedido[index].id === id){
+                if (pedido[index].id === id) {
                     pedido[index].quantity ++
                     addProduct([...pedido])
                 }
