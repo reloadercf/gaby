@@ -1,4 +1,13 @@
-.login-container {
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet');
+html body {
+  margin: 0;
+  padding: 0px;
+  font-family: 'Nunito', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.login-input {
   background-image: url(../assets/image/background.png);
   margin-top: 10%;
   background-repeat: no-repeat;
@@ -135,6 +144,16 @@
   border-color: #ffa902;
 }
 
+table {
+  width: 90%;
+  border-collapse: collapse;
+  margin: 10px 15px;
+}
+
+th, td {
+  text-align: center;
+}
+
 .headerOrder {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -154,5 +173,44 @@
 
 .iconDelete {
   width: 20px;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.btnOrder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 15px;
+}
+
+.btnSendOrder {
+  width: 100px;
+  height: 30px;
+  background: #FFA902;
+  border-radius: 15px;
+}
+
+.containerCook {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.cardOrder {
+  width: 25%;
+  border-radius: 15px;
+  border-style: solid;
+  border-color: #ffa902;
+  margin: 15px;
+  padding: 10px 15px;
 }
 /*# sourceMappingURL=login.css.map */

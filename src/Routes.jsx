@@ -2,13 +2,17 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Login from './Components/Login';
 import Products from './Components/Products';
+import Cookmodule from './Components/Kitchen/Cookmodule';
 
-const Routes = () => {
+const Routes = ({setisLoggin, isLoggin}) => {
     return (
         <Switch>
-            <Route exact path="/" component={Login}/>
             {/* <Route path="/Products/:idProducto" component={Products}/> */}
             <Route path="/Products" component={Products}/>
+            <Route path="/Kitchen/Cookmodule" component={Cookmodule}/>
+            <Route path="/">
+              <Login setisLoggin={setisLoggin} isLoggin={isLoggin} />
+            </Route>
         </Switch>
      );
 }

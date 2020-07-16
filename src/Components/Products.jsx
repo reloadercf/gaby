@@ -1,17 +1,16 @@
 import React, {useState} from 'react';
-import menu from '../data/menu'
+// import menu from '../data/menu'
 import Card from './Card'
 import Order from './Order'
 import NavBar from './NavBar';
 
 const Products = (props) => {
 
-    const productos = props.location.state.detail
+    const productos = props.detail || props.location.state.detail
     const [pedido, addProduct] =useState([]);
 
     return ( 
         <div>
-        <NavBar />
         <div className="containerMenu">
         <div className="containerCard">
             {productos.map(item => (

@@ -1,10 +1,32 @@
-import React, { useState }from 'react'
-import menu from '../data/menu'
+import React, { useState,useEffect}from 'react'
+// import menu from '../data/menu'
 import iconDelete from '../assets/image/delete.png'
-import styles from '../styles/login.css'
+// import styles from '../styles/login.css'
 
 
 const Order = ({pedido,productos,addProduct}) => {
+
+    const[formData, setFormData] = useState({
+        "name": "",
+        "table": "",
+        "order": {}
+    })
+
+    const[formValid, setFormValid] = useState(false)
+
+    let {name,table,order} = formData
+    
+    function getOrdenes() {
+        let ordenes = JSON.parse(localStorage.getItem("ordenes"))
+        return ordenes !== undefined && ordenes !== null ?  ordenes : [];
+    }
+
+    const actualizarValoresForm = e => {
+        setFormData({
+            ...formData,
+            [e.target.name] : e.target.value
+        })
+    }
 
     //delete producto al carrito
     const selectProduct = id => {
@@ -22,12 +44,61 @@ const Order = ({pedido,productos,addProduct}) => {
             }
         }
     }
+   
+    const addOrders = () => {
+
+        //Hacer validaciones
+        if(name.trim() === "" || table.trim() ==="" || pedido.length === 0) {
+            setFormValid(true)
+            return;
+        } else {
+            setFormValid(false)
+        }
+
+        let ordenActual = {
+            "name": name,
+            "table": table,
+            "order": pedido
+        }
+
+        let ordenes = getOrdenes();
+
+        //Buscar si ya se tiene una orrden para la mesa y si sí se elimina
+        for(var i=0; i<ordenes.length; i++) {
+            if(ordenes[i].table === ordenActual.table) {
+                ordenes.splice(i,1)
+            }
+        }
+        
+        ordenes.push(ordenActual)
+
+        localStorage.setItem("ordenes", JSON.stringify(ordenes))
+
+        //Limpiar valores del formulario
+        setFormData({
+            "name": "",
+            "table": ""
+        })
+
+        addProduct([])
+
+    }
 
     return (
         <div className="customerOrder">
+            {
+                formValid &&
+                <div style= {{ color:'red', textAlign:'center'}}>Error En los datos ingresados </div>
+
+            }
             <div className="headerOrder">
-                <input type="text" placeholder="Nombre cliente"/>
-                <input type="text" placeholder="No mesa"/>
+                <input
+                value={name} 
+                onChange={actualizarValoresForm} 
+                name="name" 
+                type="text" 
+                placeholder="Nombre cliente"/>
+                <input value={table} onChange={actualizarValoresForm} name="table" type="text" placeholder="No mesa"/>
             </div>
             <table>
             <caption>Ticket para cocina</caption>
@@ -44,23 +115,24 @@ const Order = ({pedido,productos,addProduct}) => {
                     <td><p>{item.quantity}</p></td>
                     <td><p>{item.name}</p></td>
                     <td><p>${item.price * item.quantity}</p></td>
-                    <td><img onClick={() => selectProduct(item.id)} src={iconDelete} className="iconDelete"/></td>
+                    <td><img onClick={() => selectProduct(item.id)} src={iconDelete} className="iconDelete" alt="iconDelete"/></td>
                     </tr> 
                  </tbody>
                 ))}
                 <tfoot>
-                    <tr>
-                    <td className="totalPrice">
-                        Total ${" "}
+                    <tr className="totalPrice">
+                        <td colspan={2} >Total</td>
+                        <td>
+                        ${" "}
                         {pedido.reduce((prevValue, currentValue) => {
                         return prevValue + currentValue.price * currentValue.quantity;
                         }, 0)}
-                    </td>
+                        </td>
                     </tr>
                 </tfoot>
             </table>
-            <div>
-                <button>Enviar</button>
+            <div className="btnOrder">
+                <button className="btnSendOrder" onClick={() => addOrders()}>Enviar</button>
             </div>
         </div> 
 
