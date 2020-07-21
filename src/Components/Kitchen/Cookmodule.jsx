@@ -1,5 +1,4 @@
 import React from 'react';
-import NavBar from '../NavBar'
 
 const Cookmodule = () => {
     const ordenes = getOrdenes()
@@ -14,7 +13,7 @@ const Cookmodule = () => {
 
     return ( 
         <div className="containerCook">
-            {/* <NavBar /> */}
+            
             {ordenes.map(item => (
                 <div className="cardOrder" key={item.table}>
                     <p><b>Cliente:</b>{item.name} </p>

@@ -67,9 +67,38 @@ html body {
   background-color: #161616;
 }
 
-.main-nav {
-  padding: 20px;
+.container-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0 10px;
+  border-bottom: 1px solid #000000;
+}
+
+.main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 10px;
+}
+
+.btn-menu {
+  margin: 20px;
+  width: 150px;
+  padding: 10px;
+  border-radius: 15px;
+  color: #ffa902;
+  background-color: #161616;
+  border: none;
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
 }
 
 .containerMenu {

@@ -5,7 +5,8 @@ import logoImage from '../assets/image/logoBurgerixtli.png';
 import Products from './Products';
 import menu from '../data/menu'
 
-const Login = ({setisLoggin, isLoggin}) => {
+const Login = ({setisLoggin}) => {
+    
     const[ email, setEmail] = useState('');
     const[ password, setPassword] = useState('');
 
@@ -25,6 +26,7 @@ const Login = ({setisLoggin, isLoggin}) => {
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
             setisLoggin(true)
+            
         } else {
             setisLoggin(false)
         }
@@ -48,7 +50,9 @@ const Login = ({setisLoggin, isLoggin}) => {
             {
             user &&
                 <div> 
-                  <Products detail= {menu.burgers} />
+                  <Products 
+                  setisLoggin={setisLoggin}
+                  detail= {menu.burgers} />
                 </div>
             }
         </div>

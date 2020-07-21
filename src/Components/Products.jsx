@@ -1,17 +1,29 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 // import menu from '../data/menu'
 import Card from './Card'
 import Order from './Order'
-import NavBar from './NavBar';
+import MenuProducts from './MenuProducts';
+import {useFirebaseApp} from 'reactfire';
+import 'firebase/auth';
 
 const Products = (props) => {
 
+    const firebase= useFirebaseApp();
     const productos = props.detail || props.location.state.detail
     const [pedido, addProduct] =useState([]);
 
+    useEffect(() => {
+        let user = firebase.auth().currentUser;
+        if (user && props.setisLoggin) {
+          props.setisLoggin(true)
+        } 
+     }, []);
+
     return ( 
         <div>
+            <MenuProducts />
         <div className="containerMenu">
+            
         <div className="containerCard">
             {productos.map(item => (
                 <Card 

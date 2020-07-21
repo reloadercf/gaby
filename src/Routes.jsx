@@ -7,9 +7,8 @@ import Cookmodule from './Components/Kitchen/Cookmodule';
 const Routes = ({setisLoggin, isLoggin}) => {
     return (
         <Switch>
-            {/* <Route path="/Products/:idProducto" component={Products}/> */}
             <Route path="/Products" component={Products}/>
-            <Route path="/Kitchen/Cookmodule" component={Cookmodule}/>
+            <Route path="/Kitchen" component={Cookmodule}/>
             <Route path="/">
               <Login setisLoggin={setisLoggin} isLoggin={isLoggin} />
             </Route>

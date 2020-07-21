@@ -1,17 +1,17 @@
 import React,{Fragment, useState} from 'react';
-// import {useFirebaseApp} from 'reactfire';
+//import {useFirebaseApp} from 'reactfire';
 import Routes from './Routes';
 import NavBar from './Components/NavBar';
+//import 'firebase/auth';
 
 function App() {
   // const firebase= useFirebaseApp();
-  // console.log(useFirebaseApp);
-  const [isLoggin, setisLoggin] = useState(false)
+  const [isLoggin, setisLoggin] = useState(true)
 
   return (
     <Fragment>
-      { isLoggin &&
-          <NavBar />
+      {isLoggin &&
+        <NavBar/>
       }
       
       <Routes setisLoggin={setisLoggin}/>

@@ -1,7 +1,7 @@
-import React, { useState,useEffect}from 'react'
+import React, {useState}from 'react'
 // import menu from '../data/menu'
 import iconDelete from '../assets/image/delete.png'
-// import styles from '../styles/login.css'
+import '../styles/login.css'
 
 
 const Order = ({pedido,productos,addProduct}) => {
@@ -63,7 +63,7 @@ const Order = ({pedido,productos,addProduct}) => {
 
         let ordenes = getOrdenes();
 
-        //Buscar si ya se tiene una orrden para la mesa y si sí se elimina
+        //Buscar si ya se tiene una orden para la mesa y si sí se elimina
         for(var i=0; i<ordenes.length; i++) {
             if(ordenes[i].table === ordenActual.table) {
                 ordenes.splice(i,1)
@@ -121,7 +121,7 @@ const Order = ({pedido,productos,addProduct}) => {
                 ))}
                 <tfoot>
                     <tr className="totalPrice">
-                        <td colspan={2} >Total</td>
+                        <td>Total</td>
                         <td>
                         ${" "}
                         {pedido.reduce((prevValue, currentValue) => {
