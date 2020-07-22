@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import 'firebase/auth';
-import { useFirebaseApp, useUser } from 'reactfire';
-import logoImage from '../assets/image/logoBurgerixtli.png';
+
+
 import Products from './Products';
 import menu from '../data/menu'
+import Display from './Login/Display'
 
-const Login = ({setisLoggin}) => {
+const Login = ({setisLoggin,firebase,user}) => {
     
     const[ email, setEmail] = useState('');
     const[ password, setPassword] = useState('');
 
-    const firebase= useFirebaseApp();
-    const user = useUser();
+    
 
 
     const submit = async () => {
@@ -23,29 +23,26 @@ const Login = ({setisLoggin}) => {
     }
 
     //Observador de estado
-    firebase.auth().onAuthStateChanged(function(user) {
-        if (user) {
-            setisLoggin(true)
+    // firebase.auth().onAuthStateChanged(function(user) {
+    //     if (user) {
+    //         setisLoggin(true)
             
-        } else {
-            setisLoggin(false)
-        }
-    });
+    //     } else {
+    //         setisLoggin(false)
+    //     }
+    // });
 
     return ( 
         <div className="login-container">
+            Login
             {
             !user &&
-            <div className="login-input">
-                <div className="logo-circle">
-                    <img src={logoImage} className="App-logo" alt="logo" />
-                </div> 
-                
-                <input type="email" id="email" placeholder="Email" onChange={(ev) => setEmail(ev.target.value) } />
-                <input type="password" id="password" placeholder="Password" onChange={ (ev) => setPassword(ev.target.value) }/>
-                <button onClick={submit}>Create account</button>
-                <button onClick={login}>Login</button>
-            </div>
+            <Display 
+            setEmail={setEmail}
+            setPassword={setPassword}
+            submit={submit}
+            login={login}
+            />
             }
             {
             user &&
